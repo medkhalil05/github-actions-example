@@ -36,12 +36,18 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        registry: docker.io
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
     - name: Build & push Docker image
       uses: docker/build-push-action@v4
       with:
-        image: mohamedkhalil05/github-cicd-actions
-        tags: latest
-        registry: docker.io
-        dockerfile: Dockerfile
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: mohamedkhalil05/github-cicd-actions:latest
+        platforms: linux/amd64
