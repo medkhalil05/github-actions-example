@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bienvenue • JavaTechie</title>
+  <link rel="stylesheet" href="/css/welcome.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">GREEN tech</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Bienvenue chez <span class="accent">GREEN tech</span></h1>
+      <p class="lead">Des solutions CI/CD simples, robustes et prêtes pour la production.</p>
+      <a class="cta" href="#contact">Contactez-nous</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="features" class="card-grid">
+      <article class="card">
+        <h3>Déploiement continu</h3>
+        <p>Automatisez vos builds et déploiements avec des workflows fiables.</p>
+      </article>
+      <article class="card">
+        <h3>Tests automatisés</h3>
+        <p>Intégrez des tests unitaires et d'intégration dans votre pipeline.</p>
+      </article>
+      <article class="card">
+        <h3>Sécurité & Monitoring</h3>
+        <p>Surveillez et protégez vos livraisons en production.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Prêt à commencer ?</h2>
+      <p>Envoyez-nous un message — nous vous répondrons rapidement.</p>
+      <a class="cta ghost" href="mailto:contact@green-tech.example">contact@green-tech.example</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> GREEN tech • All rights reserved</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
